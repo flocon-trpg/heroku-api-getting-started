@@ -1,0 +1,27 @@
+{
+    "name": "Flocon APIサーバー",
+    "description": "Flocon APIサーバーをHerokuにデプロイします。",
+    "keywords": [
+        "TRPG",
+        "TypeScript",
+        "JavaScript"
+    ],
+    "env": {
+        "AUTO_MIGRATION": {
+            "description": "trueならば、データベースのマイグレーションを自動で行います。",
+            "value": "true"
+        },
+        "ENTRY_PASSWORD": {
+            "description": "エントリーパスワード（自鯖に入る際の合言葉）。デフォルトではfloconというパスワードが設定されています。",
+            "value": "{\"type\":\"plain\", \"value\": \"flocon\"}"
+        },
+        "NODE_ENV": {
+            "description": "productionならば、本番環境のモードで動作します。developmentなどであればデバッグモードで動作します。",
+            "value": "production"
+        }
+    },
+    "addons": [
+        "heroku-postgresql"
+    ],
+    "stack": "container"
+}
