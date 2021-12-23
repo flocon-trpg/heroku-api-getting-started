@@ -2,22 +2,28 @@
     "name": "Flocon APIサーバー",
     "description": "Flocon APIサーバーをHerokuにデプロイします。",
     "keywords": [
+        "Flocon",
         "TRPG",
         "TypeScript",
         "JavaScript"
     ],
     "env": {
+        "FIREBASE_ADMIN_SECRET": {
+            "description": "Firebase 管理ページから生成した Firebase Admin SDK の秘密鍵ファイル（JSONファイル）の中身を入力します。"
+        },
         "AUTO_MIGRATION": {
-            "description": "trueならば、データベースのマイグレーションを自動で行います。",
-            "value": "true"
+            "description": "trueならば、データベースのマイグレーションを自動で行います。通常は変更する必要はありません。",
+            "value": "true",
+            "required": false
         },
         "ENTRY_PASSWORD": {
-            "description": "エントリーパスワード（自鯖に入る際の合言葉）。デフォルトではfloconというパスワードが設定されています。",
-            "value": "{\"type\":\"plain\", \"value\": \"flocon\"}"
+            "description": "エントリーパスワード（自鯖に入る際の合言葉）。デフォルトではhi-floconというエントリーパスワードが設定されています（この場で変更しても構いません）。",
+            "value": "{\"type\":\"plain\", \"value\": \"hi-flocon\"}"
         },
         "NODE_ENV": {
-            "description": "productionならば、本番環境のモードで動作します。developmentなどであればデバッグモードで動作します。",
-            "value": "production"
+            "description": "productionならば、本番環境のモードで動作します。developmentなどであればデバッグモードで動作します。通常は変更する必要はありません。",
+            "value": "production",
+            "required": false
         }
     },
     "addons": [
