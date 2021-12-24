@@ -8,17 +8,21 @@
         "JavaScript"
     ],
     "env": {
-        "FIREBASE_ADMIN_SECRET": {
-            "description": "Firebase 管理ページから生成した Firebase Admin SDK の秘密鍵ファイル（JSONファイル）の中身を入力します。"
-        },
         "AUTO_MIGRATION": {
             "description": "trueならば、データベースのマイグレーションを自動で行います。通常は変更する必要はありません。",
             "value": "true",
             "required": false
         },
         "ENTRY_PASSWORD": {
-            "description": "エントリーパスワード（自鯖に入る際の合言葉）。デフォルトではhi-floconというエントリーパスワードが設定されています（この場で変更しても構いません）。",
+            "description": "エントリーパスワード（自鯖に入る際の合言葉）。デフォルトではhi-floconというエントリーパスワードが設定されています。変更しても構いません。",
             "value": "{\"type\":\"plain\", \"value\": \"hi-flocon\"}"
+        },
+        "FIREBASE_ADMIN_SECRET": {
+            "description": "Firebase 管理ページから生成した Firebase Admin SDK の秘密鍵ファイル（JSONファイル）の中身を入力します。この文字列がもし第三者に知られると、Firebase Authenticationで登録された全ユーザーの検索、編集、削除を行うことや、Firebase Storageの全ファイルの完全なアクセスなどが可能になるため、漏洩させないように気をつけてください。"
+        },
+        "HEROKU": {
+            "description": "trueならば、Herokuに最適化したモードで動作します。通常は変更する必要はありません。",
+            "value": "true"
         },
         "NODE_ENV": {
             "description": "productionならば、本番環境のモードで動作します。developmentなどであればデバッグモードで動作します。通常は変更する必要はありません。",
