@@ -1,3 +1,4 @@
 build:
   docker:
+    # api-server.Dockerfile の代わりに api-server_dockerhub.Dockerfile を指定することで、Floconの公式イメージを使用することもできます。
     web: api-server.Dockerfile
