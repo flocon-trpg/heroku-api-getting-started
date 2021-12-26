@@ -22,7 +22,13 @@
         },
         "HEROKU": {
             "description": "trueならば、Herokuに最適化したモードで動作します。通常は変更する必要はありません。",
-            "value": "true"
+            "value": "true",
+            "required": false
+        },
+        "ROOMHIST_COUNT": {
+            "description": "部屋の編集の競合を解決するために保持する編集履歴の個数。Heroku PostgresをHobby Devプランで利用する場合はこのままにしてください。",
+            "value": "3",
+            "required": false
         },
         "NODE_ENV": {
             "description": "productionならば、本番環境のモードで動作します。developmentなどであればデバッグモードで動作します。通常は変更する必要はありません。",
