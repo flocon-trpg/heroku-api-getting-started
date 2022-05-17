@@ -9,24 +9,28 @@
     ],
     "env": {
         "AUTO_MIGRATION": {
-            "description": "trueならば、データベースのマイグレーションを自動で行います。通常は変更する必要はありません。",
+            "description": "trueならば、データベースのマイグレーションを自動で行います。通常はこのままで構いません。",
             "value": "true",
             "required": false
         },
         "ENTRY_PASSWORD": {
-            "description": "エントリーパスワード（自鯖に入る際の合言葉）。デフォルトではhi-floconというエントリーパスワードが設定されています。変更しても構いません。",
-            "value": "{\"type\":\"plain\", \"value\": \"hi-flocon\"}"
+            "description": "エントリーパスワード（サーバーに入る際の合言葉）。デフォルトで入力されている値をそのまま使うと flocon というエントリーパスワードが設定されます。身内向けサーバーの場合は flocon の部分を変更して、独自のエントリーパスワードを設定したほうがいいかもしれません。",
+            "value": "{\"type\":\"plain\", \"value\": \"flocon\"}"
         },
         "FIREBASE_ADMIN_SECRET": {
             "description": "Firebase 管理ページから生成した Firebase Admin SDK の秘密鍵ファイル（JSONファイル）の中身を入力します。この文字列がもし第三者に知られると、Firebase Authenticationで登録された全ユーザーの検索、編集、削除を行うことや、Firebase Storageの全ファイルの完全なアクセスなどが可能になるため、漏洩させないように気をつけてください。"
         },
+        "FLOCON_ADMIN": {
+            "description": "管理者権限を与えるユーザーを指定できます。空白のままでも構いません。",
+            "required": false
+        },
         "HEROKU": {
-            "description": "trueならば、Herokuに最適化したモードで動作します。通常は変更する必要はありません。",
+            "description": "trueならば、HerokuとHeroku Postgresに対応したモードで動作します。通常はこのままで構いません。",
             "value": "true",
             "required": false
         },
         "ROOMHIST_COUNT": {
-            "description": "部屋の編集の競合を解決するために保持する編集履歴の個数。Heroku PostgresをHobby Devプランで利用する場合はこのままにしてください。",
+            "description": "部屋の編集の競合を解決するために保持する編集履歴の個数。Heroku PostgresをHobby Devプランで利用する場合は3前後などといった小さめの値にすることを推奨します。",
             "value": "3",
             "required": false
         },
