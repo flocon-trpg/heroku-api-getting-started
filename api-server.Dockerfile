@@ -6,7 +6,7 @@ FROM node:16-bullseye as build
 
 # branchという名前ですが、ブランチではなくタグも指定できます。
 # これを変更することで、デプロイするAPIサーバーのバージョンを変更できます。
-ARG branch="api/v0.7.4"
+ARG branch="api/v0.7.5"
 
 WORKDIR /app
 
